@@ -1,6 +1,7 @@
 # Africa AI Atlas -- Talent & Education Data (All 54 Countries)
 
 **Compiled: March 2026 | 7Square Inc.**
+**Last Verified: 15 March 2026 -- GitHub developer counts updated to 2025 Innovation Graph data; AI training initiatives (2025-2026) added; university programs expanded; Oxford Insights global ranks added**
 
 ## Data Sources & Methodology
 
@@ -189,3 +190,30 @@
 - [Ecofin Agency: AI Talent Readiness 2025](https://www.ecofinagency.com/news/2105-46924-south-africa-tunisia-and-egypt-lead-africa-in-ai-talent-readiness-for-2025)
 - [TechCabal: 6 African Universities that Drove AI Innovation in 2025](https://techcabal.com/2025/12/05/6-african-universities-that-advanced-ai-in-2025/)
 - [Rest of World: Fastest-Growing Countries for Software Development](https://restofworld.org/2024/github-developer-bangladesh-nigeria-pakistan/)
+- [GitHub Blog: Racing into 2025 with Innovation Graph Data](https://github.blog/news-insights/policy-news-and-insights/racing-into-2025-with-new-github-innovation-graph-data/)
+- [CoinLaw: GitHub Statistics 2026](https://coinlaw.io/github-statistics/)
+- [SQ Magazine: GitHub Statistics 2026](https://sqmagazine.co.uk/github-statistics/)
+- [Kinsta: Key GitHub Statistics 2026](https://kinsta.com/blog/github-statistics/)
+- [AfroTech: GitHub CEO on Nigeria's Developer Community](https://afrotech.com/github-ceo-says-nigerias-developer-community-is-world-class-and-growing-fast)
+- [TechCabal: Nigeria Ranked 2nd in Global Developer Growth](https://techcabal.com/2024/03/20/nigeria-egypt-among-worlds-10-fastest-growing-countries-for-software-developers-in-2023/)
+- [Microsoft: 3 Million African AI Training Target (2026)](https://windowsnews.ai/article/microsofts-african-ai-initiative-training-3-million-bundling-copilot-with-mtn.404837)
+- [Microsoft SA: 1 Million AI Skilling Initiative](https://news.microsoft.com/source/emea/features/microsoft-south-africa-launches-ai-skilling-initiative-to-train-1-million-people-by-2026/)
+- [Microsoft: 350K Nigerians Trained in AI](https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/)
+- [Microsoft/Education Plus: Empower AI Digital Skills Platform for Africa (Mar 2026)](https://news.microsoft.com/source/emea/2026/03/education-plus-and-microsoft-launch-empower-an-ai-digital-skills-platform-for-young-people-across-africa/)
+- [Google: AI Skilling Blueprint for Africa](https://dig.watch/updates/google-launches-ai-skilling-blueprint-to-close-africas-skills-gap)
+- [Google: Investing in Africa's AI Future](https://blog.google/company-news/inside-google/around-the-globe/google-africa/africas-ai-future/)
+- [TechNext24: Google $2.25M AI Skilling Policy](https://technext24.com/2025/11/20/africa-benefit-google-ai-skilling-policy/)
+- [Google for Startups Accelerator: AI First (Africa)](https://startup.google.com/programs/accelerator/ai-first/africa/)
+- [AWS re/Start Kenya Launch](https://aws.amazon.com/blogs/training-and-certification/aws-re-start-launches-in-kenya-as-program-expands-across-africa/)
+- [GitHub/Microsoft: GenAI for Youth Program in Africa](https://github.com/newsroom/press-releases/genai-for-youth-program)
+- [AI Reports Africa: Top African Countries Ready for AI in 2025](https://aireports.africa/2025/08/30/top-african-countries-ready-for-ai-in-2025-leaders-laggards-and-the-path-forward/)
+- [Oxford Insights/AI Readiness Index 2026](https://www.index.dev/blog/ai-readiness-index-statistics)
+- [Kenya Ranks 4th in AI Talent Readiness (Kenyans.co.ke)](https://www.kenyans.co.ke/news/112494-kenya-ranks-4th-africa-ai-talent-readiness-2025-report)
+- [Nigeria Ranks 18th in AI Talent Readiness (BusinessDay)](https://businessday.ng/companies/article/nigeria-ranks-18th-among-african-countries-in-ai-talent-readiness-pwc/)
+- [Tunisia 2nd in AI Talent Readiness Index (FIPA)](https://investintunisia.tn/en/tunisia-2nd-in-the-africa-2025-ai-talent-readiness-index/)
+- [AIMS South Africa: AI for Science Masters](https://ai.aims.ac.za/)
+- [Stellenbosch University: MSc ML&AI](https://mlai.sun.ac.za/)
+- [Mastersportal: AI in South Africa 2026](https://www.mastersportal.com/study-options/271565130/artificial-intelligence-south-africa.html)
+- [WinBuzzer: Microsoft Trains Millions in Africa (Mar 2026)](https://winbuzzer.com/2026/03/12/microsoft-trains-millions-in-africa-to-counter-deepseek-xcxwbn/)
+- [Springer: AI in Africa Bibliometric Analysis 2013-2022](https://link.springer.com/article/10.1007/s44163-023-00084-2)
+- [PMC: ML Research Trends in Africa 30 Years](https://pmc.ncbi.nlm.nih.gov/articles/PMC10148585/)
