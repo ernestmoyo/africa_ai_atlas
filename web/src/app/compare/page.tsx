@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { countries, PILLAR_LABELS, getScoreColor, getScoreLabel, type CountryData } from "@/lib/data";
+import { countries, PILLAR_LABELS, getScoreColor, type CountryData } from "@/lib/data";
+
+const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ef4444"];
 
 const PillarChart = dynamic(() => import("@/components/PillarChart"), { ssr: false });
 
@@ -41,20 +43,21 @@ export default function ComparePage() {
           <option value="" disabled>Add a country...</option>
           {countries.map((c) => (
             <option key={c.iso3} value={c.iso3} disabled={selected.includes(c.iso3)}>
-              #{c.rank} {c.name} ({c.composite_score})
+              {c.name} (#{c.rank}, score: {c.composite_score})
             </option>
           ))}
         </select>
 
         <div className="flex flex-wrap gap-2 mt-3">
-          {selectedCountries.map((c) => (
+          {selectedCountries.map((c, i) => (
             <button
               key={c.iso3}
               onClick={() => toggle(c.iso3)}
-              className="px-3 py-1.5 rounded-full text-sm font-medium text-white bg-[var(--accent)] hover:bg-[var(--accent)]/80 transition flex items-center gap-2"
+              className="px-3 py-1.5 rounded-full text-sm font-medium text-white transition flex items-center gap-2"
+              style={{ background: COLORS[i % COLORS.length] }}
             >
               {c.name}
-              <span className="text-white/60">×</span>
+              <span className="text-white/60">&times;</span>
             </button>
           ))}
         </div>
@@ -62,20 +65,22 @@ export default function ComparePage() {
 
       {selectedCountries.length >= 2 && (
         <>
-          {/* Radar Chart */}
+          {/* Radar Chart — taller */}
           <div className="bg-[var(--card)] border border-[var(--card-border)] rounded-xl p-6 mb-8">
             <h2 className="text-lg font-bold text-white mb-4">Pillar Comparison</h2>
-            <PillarChart countries={selectedCountries} />
+            <div className="min-h-[420px]">
+              <PillarChart countries={selectedCountries} />
+            </div>
           </div>
 
-          {/* Comparison Table */}
+          {/* Comparison Table with conditional heat */}
           <div className="overflow-x-auto bg-[var(--card)] border border-[var(--card-border)] rounded-xl">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[var(--card-border)]">
                   <th className="px-4 py-3 text-left text-[var(--muted)] font-medium">Metric</th>
-                  {selectedCountries.map((c) => (
-                    <th key={c.iso3} className="px-4 py-3 text-right text-white font-medium">
+                  {selectedCountries.map((c, i) => (
+                    <th key={c.iso3} className="px-4 py-3 text-right font-medium" style={{ color: COLORS[i % COLORS.length] }}>
                       {c.name}
                     </th>
                   ))}
@@ -88,22 +93,27 @@ export default function ComparePage() {
                   values={selectedCountries.map((c) => String(c.composite_score))}
                   colors={selectedCountries.map((c) => getScoreColor(c.composite_score))}
                   bold
+                  numericValues={selectedCountries.map((c) => c.composite_score)}
                 />
-                {(Object.entries(PILLAR_LABELS) as [string, string][]).map(([key, label]) => (
-                  <CompRow
-                    key={key}
-                    label={label}
-                    values={selectedCountries.map((c) =>
-                      String(c.pillar_scores[key as keyof CountryData["pillar_scores"]])
-                    )}
-                  />
-                ))}
-                <CompRow label="Internet %" values={selectedCountries.map((c) => c.raw_data.internet_penetration != null ? `${c.raw_data.internet_penetration}%` : "N/A")} />
-                <CompRow label="Electricity %" values={selectedCountries.map((c) => c.raw_data.electricity_access != null ? `${c.raw_data.electricity_access}%` : "N/A")} />
-                <CompRow label="Fixed BB/100" values={selectedCountries.map((c) => c.raw_data.fixed_broadband_per100 != null ? String(c.raw_data.fixed_broadband_per100) : "N/A")} />
+                {(Object.entries(PILLAR_LABELS) as [string, string][]).map(([key, label]) => {
+                  const nums = selectedCountries.map((c) =>
+                    c.pillar_scores[key as keyof CountryData["pillar_scores"]]
+                  );
+                  return (
+                    <CompRow
+                      key={key}
+                      label={label}
+                      values={nums.map(String)}
+                      numericValues={nums}
+                    />
+                  );
+                })}
+                <CompRow label="Internet %" values={selectedCountries.map((c) => c.raw_data.internet_penetration != null ? `${c.raw_data.internet_penetration}%` : "N/A")} numericValues={selectedCountries.map((c) => c.raw_data.internet_penetration ?? 0)} />
+                <CompRow label="Electricity %" values={selectedCountries.map((c) => c.raw_data.electricity_access != null ? `${c.raw_data.electricity_access}%` : "N/A")} numericValues={selectedCountries.map((c) => c.raw_data.electricity_access ?? 0)} />
+                <CompRow label="Fixed BB/100" values={selectedCountries.map((c) => c.raw_data.fixed_broadband_per100 != null ? String(c.raw_data.fixed_broadband_per100) : "N/A")} numericValues={selectedCountries.map((c) => c.raw_data.fixed_broadband_per100 ?? 0)} />
                 <CompRow label="AI Strategy" values={selectedCountries.map((c) => c.raw_data.ai_strategy)} />
                 <CompRow label="Data Protection" values={selectedCountries.map((c) => c.raw_data.data_protection_law)} />
-                <CompRow label="Data Centers" values={selectedCountries.map((c) => String(c.raw_data.data_centers))} />
+                <CompRow label="Data Centers" values={selectedCountries.map((c) => String(c.raw_data.data_centers))} numericValues={selectedCountries.map((c) => c.raw_data.data_centers)} />
               </tbody>
             </table>
           </div>
@@ -119,19 +129,36 @@ export default function ComparePage() {
   );
 }
 
-function CompRow({ label, values, colors, bold }: { label: string; values: string[]; colors?: string[]; bold?: boolean }) {
+function CompRow({ label, values, colors, bold, numericValues }: {
+  label: string;
+  values: string[];
+  colors?: string[];
+  bold?: boolean;
+  numericValues?: number[];
+}) {
+  // Determine which cell has the highest value for heat-map highlighting
+  const maxVal = numericValues ? Math.max(...numericValues) : 0;
+  const minVal = numericValues ? Math.min(...numericValues) : 0;
+
   return (
     <tr className="border-b border-[var(--card-border)]">
-      <td className="px-4 py-2.5 text-[var(--muted)]">{label}</td>
-      {values.map((v, i) => (
-        <td
-          key={i}
-          className={`px-4 py-2.5 text-right ${bold ? "font-bold text-lg" : ""}`}
-          style={colors?.[i] ? { color: colors[i] } : { color: "white" }}
-        >
-          {v}
-        </td>
-      ))}
+      <td className="px-4 py-2.5 text-[var(--muted)] whitespace-nowrap">{label}</td>
+      {values.map((v, i) => {
+        let cellBg = "";
+        if (numericValues && numericValues.length > 1 && maxVal !== minVal) {
+          if (numericValues[i] === maxVal) cellBg = "heat-high";
+          else if (numericValues[i] === minVal) cellBg = "heat-low";
+        }
+        return (
+          <td
+            key={i}
+            className={`px-4 py-2.5 text-right ${bold ? "font-bold text-lg" : ""} ${cellBg}`}
+            style={colors?.[i] ? { color: colors[i] } : { color: "white" }}
+          >
+            {v}
+          </td>
+        );
+      })}
     </tr>
   );
 }

@@ -6,10 +6,12 @@
   --card: #1e293b;
   --card-border: #334155;
   --accent: #3b82f6;
+  --accent-gold: #E8A838;
   --accent-green: #10b981;
   --accent-amber: #f59e0b;
   --accent-red: #ef4444;
   --accent-purple: #8b5cf6;
+  --accent-terra: #C0542A;
   --muted: #94a3b8;
 }
 
@@ -29,13 +31,6 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
-/* Score badge colors */
-.score-advanced { background: #059669; color: white; }
-.score-developing { background: #2563eb; color: white; }
-.score-emerging { background: #d97706; color: white; }
-.score-early { background: #ea580c; color: white; }
-.score-nascent { background: #dc2626; color: white; }
-
 /* Map tooltip */
 .map-tooltip {
   background: #1e293b;
@@ -52,17 +47,26 @@ body {
 .rankings-table th {
   cursor: pointer;
   user-select: none;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 .rankings-table th:hover {
   background: #334155;
+  color: #e2e8f0;
 }
-
-/* Pillar bar */
-.pillar-bar {
-  height: 8px;
-  border-radius: 4px;
-  transition: width 0.5s ease;
+.rankings-table th.active-sort {
+  color: var(--accent);
+}
+.rankings-table tbody tr {
+  transition: background 0.15s;
+}
+.rankings-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.rankings-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.015);
+}
+.rankings-table tbody tr:nth-child(even):hover {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* Animations */
@@ -79,3 +83,26 @@ body {
   width: 100%;
   height: auto;
 }
+
+/* Hero gradient */
+.hero-gradient {
+  background: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 30% 50%, rgba(232, 168, 56, 0.05) 0%, transparent 50%);
+}
+
+/* Rank badges */
+.rank-badge-1 { background: linear-gradient(135deg, #fbbf24, #d97706); color: #1e293b; }
+.rank-badge-2 { background: linear-gradient(135deg, #d1d5db, #9ca3af); color: #1e293b; }
+.rank-badge-3 { background: linear-gradient(135deg, #d97706, #b45309); color: white; }
+.rank-badge-default { background: var(--card); color: white; border: 1px solid var(--card-border); }
+
+/* Heat cell */
+.heat-high { background: rgba(16, 185, 129, 0.12); }
+.heat-mid { background: rgba(59, 130, 246, 0.08); }
+.heat-low { background: rgba(239, 68, 68, 0.08); }
+
+/* Stat card accent borders */
+.stat-accent-blue { border-top: 3px solid var(--accent); }
+.stat-accent-green { border-top: 3px solid var(--accent-green); }
+.stat-accent-gold { border-top: 3px solid var(--accent-gold); }
+.stat-accent-purple { border-top: 3px solid var(--accent-purple); }

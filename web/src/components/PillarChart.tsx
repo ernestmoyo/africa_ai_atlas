@@ -33,7 +33,7 @@ export default function PillarChart({ countries: data }: Props) {
 
   return (
     <div>
-      <ResponsiveContainer width="100%" height={350}>
+      <ResponsiveContainer width="100%" height={400}>
         <RadarChart data={chartData} cx="50%" cy="50%" outerRadius="70%">
           <PolarGrid stroke="#334155" />
           <PolarAngleAxis
