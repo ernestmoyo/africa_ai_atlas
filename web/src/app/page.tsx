@@ -178,7 +178,7 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 gap-4 text-sm text-[var(--muted)]">
             {[
               "Egypt leads Africa with 69.0/100, driven by a perfect policy score (100/100 on Oxford Insights).",
-              "Kenya is the innovation powerhouse — $1.04B in 2025 tech funding, Microsoft $1B data center.",
+              "Kenya is the innovation powerhouse — $1.04B total tech funding in 2025 (equity + debt), Microsoft $1B data center.",
               `Only ${withStrategy} of 54 countries (${Math.round((withStrategy/54)*100)}%) have a national AI strategy. Over 30 remain inactive.`,
               "Africa has <1% of global data center capacity. South Africa alone hosts 25% of the continent's total.",
               "The Big Four (Nigeria, Kenya, South Africa, Egypt) capture 81% of all tech equity funding.",

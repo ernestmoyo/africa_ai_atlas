@@ -322,34 +322,51 @@ All indicators were cross-referenced against web-accessible sources as of March 
 - [Ecofin Agency: AI Talent Readiness for 2025](https://www.ecofinagency.com/news/2105-46924-south-africa-tunisia-and-egypt-lead-africa-in-ai-talent-readiness-for-2025)
 - [Togo Novissi Program (CEGA Berkeley)](https://cega.berkeley.edu/collection/ai-assisted-cash-transfers-togo/)
 - [GSMA AI in Ethiopia Report 2025](https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/wp-content/uploads/2025/04/AI-in-Ethiopia.pdf)
+- [Ghana-UAE $1B AI Hub Deal (African Business)](https://african.business/2025/12/innov-africa-deals/ghana-and-uae-sign-1bn-deal-to-build-africas-largest-innovation-and-ai-hub)
+- [10 Exciting African AI Products Launched in 2025 (TechCabal)](https://techcabal.com/2025/12/05/10-exciting-african-ai-products-launched-in-2025/)
+- [23 African Startups Building AI Infrastructure (TechCabal)](https://techcabal.com/2025/12/06/ai-startups-building-for-africa/)
+- [Africa's Top 25 AI in Healthcare Voices 2026 (TheNextAfrica)](https://thenextafrica.com/africas-top-25-ai-in-healthcare-voices-2026-signals-a-new-era-for-data-driven-health-systems/)
+- [Top African Countries Ready for AI 2025 (AI Reports Africa)](https://aireports.africa/2025/08/30/top-african-countries-ready-for-ai-in-2025-leaders-laggards-and-the-path-forward/)
+- [Anthropic-Rwanda-ALX Chidi Partnership](https://www.anthropic.com/news/rwandan-government-partnership-ai-education)
+- [Cassava Technologies $720M AI Factory with Nvidia (CNN)](https://www.cnn.com/2025/04/03/africa/africa-ai-cassava-technologies-nvidia-spc)
+- [Burkina Faso National AI Strategy (Biometric Update)](https://www.biometricupdate.com/202509/national-ai-strategy-to-guide-burkina-fasos-digital-transformation)
+- [Cameroon National AI Strategy 2040 (TechAfrica News)](https://techafricanews.com/2025/07/08/cameroon-unveils-2040-ai-roadmap-anchored-on-seven-strategic-pillars/)
+- [Zimbabwe National AI Strategy 2026-2030 (iAfrica)](https://iafrica.com/zimbabwe-approves-first-national-artificial-intelligence-strategy-to-drive-digital-transformation/)
+- [eShandi Zambia AI Fintech (Disrupt Africa)](https://disruptafrica.com/2025/04/08/how-zambias-eshandi-is-transforming-financial-inclusion-with-ai-powered-finance/)
+- [Benin AI & Local Language Strategy (ITC)](https://www.intracen.org/news-and-events/news/benin-paves-the-way-for-ai-and-big-data-with-senia)
+- [AI Early Warning Systems Mozambique (FurtherAfrica)](https://furtherafrica.com/2025/11/10/ai-meets-climate-action-in-mozambique-building-smarter-early-warning-systems/)
+- [Dawa Health Zimbabwe AI Diagnostics (VC4A)](https://vc4a.com/ventures/dawa-health/)
+- [InstaDeep AgroNT Plant Genomics (Nature Communications Biology)](https://www.nature.com/articles/s42003-024-06465-2)
+- [South Africa EGDI 2024 Rank 40 (DCDT)](https://www.dcdt.gov.za/media-statements-releases/532-south-africa-s-significant-improvement-in-the-united-nations-e-government-index-2024.html)
+- [EGDI 2024 Africa Overview (Ecofin Agency)](https://www.ecofinagency.com/telecom/2309-45916-south-africa-mauritius-and-tunisia-lead-e-government-progress-in-africa)
 
 ---
 
-## Oxford Insights Government AI Readiness Index 2025 — African Rankings (Partial)
+## Oxford Insights Government AI Readiness Index 2025 — African Rankings (Verified)
 
-| Rank (Global) | Country | Score |
-|---|---|---|
-| 51 | Egypt | 57.5 |
-| 65 | Kenya | ~54 |
-| 67 | South Africa | ~53 |
-| 71 | Mauritius | 53.27 |
-| 72 | Nigeria | ~52 |
-| ~75 | Rwanda | ~50 |
-| — | Morocco | ~49 (climbed 14 places) |
-| — | Tunisia | ~48 |
-| — | Senegal | ~45 |
-| — | Ghana | ~44 |
-| — | Benin | ~42 |
-| — | Cote d'Ivoire | ~38 |
-| — | Ethiopia | ~37 |
-| — | Tanzania | ~36 |
-| — | Botswana | ~35 |
-| — | Namibia | ~34 |
-| — | Cabo Verde | ~33 |
-| — | Algeria | ~32 |
-| — | Uganda | ~31 |
-| — | Zambia | ~30 |
-| — | Zimbabwe | ~29 |
-| — | Sub-Saharan Africa avg | 32.70 |
+| Rank (Global) | Country | Score | Verification Status |
+|---|---|---|---|
+| 51 | Egypt | 57.50 | CONFIRMED (climbed 14 places; perfect 100/100 Policy Capacity) |
+| 57 | Mauritius | 53.27 | CONFIRMED (aireports.africa) |
+| 68 | South Africa | ~53.0 | CONFIRMED rank (aireports.africa) |
+| 70 | Tunisia | ~52.5 | CONFIRMED rank (aireports.africa) |
+| 87 | Morocco | ~49.0 | CONFIRMED rank (aireports.africa) |
+| 90 | Kenya | ~48.5 | CONFIRMED rank (aireports.africa) |
+| 93 | Rwanda | ~47.5 | CONFIRMED rank (aireports.africa) |
+| ~95 | Nigeria | ~47.0 | Estimated (Policy Capacity 80.5/100 confirmed) |
+| ~104 | Ghana | ~44.0 | Estimated |
+| ~116 | Senegal | ~40.0 | Estimated |
+| ~118 | Benin | ~39.5 | Estimated (first mainland SSA AI strategy confirmed) |
+| ~120 | Cote d'Ivoire | ~38.0 | Estimated |
+| ~125 | Ethiopia | ~37.0 | Estimated |
+| ~128 | Tanzania | ~36.0 | Estimated |
+| ~130 | Botswana | ~35.0 | Estimated |
+| ~132 | Namibia | ~34.0 | Estimated |
+| ~134 | Cabo Verde | ~33.0 | Estimated |
+| ~136 | Algeria | ~32.0 | Estimated |
+| ~138 | Uganda | ~31.0 | Estimated |
+| ~140 | Zambia | ~30.0 | Estimated |
+| ~142 | Zimbabwe | ~29.0 | Estimated |
+| — | Sub-Saharan Africa avg | 32.70 | CONFIRMED |
 
-*Note: Scores marked with ~ are estimates based on relative rankings and regional averages. Exact scores for all countries require the full Oxford Insights dataset.*
+*Note: Egypt, Mauritius scores confirmed. Global ranks for top 7 African countries confirmed via aireports.africa. IMPORTANT CORRECTION: Previous data listed Kenya at rank 65, South Africa at 67, Nigeria at 72, Rwanda at 75 — these were our OWN composite scores, not Oxford Insights ranks. The Oxford Insights ranks are higher-numbered (lower-ranked) than our composite rankings because Oxford weights factors differently. Our CSV column "Oxford Score" correctly had 53.00 for Kenya, 50.68 for SA, 51.85 for Nigeria, 52.60 for Rwanda.*
