@@ -20,3 +20,7 @@ Thumbs.db
 
 # Debug
 npm-debug.log*
+
+# Internal / personal files
+ACTION_PLAN.md
+docs/*.pdf
