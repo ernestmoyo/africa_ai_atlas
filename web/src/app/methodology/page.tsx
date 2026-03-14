@@ -5,7 +5,7 @@ export default function MethodologyPage() {
     {
       key: "policy_governance",
       indicators: ["National AI Strategy", "Data Protection Law", "AI Ethics Framework", "Government AI Body", "Open Data Portal"],
-      sources: "UNESCO, UNCTAD, Carnegie Endowment, government portals",
+      sources: "UNESCO, UNCTAD, Carnegie Endowment, AI Policy Lab Africa, Data Protection Africa, UN country offices, government portals, Ecofin Agency, iAfrica",
     },
     {
       key: "infrastructure_data",
@@ -85,6 +85,46 @@ export default function MethodologyPage() {
           </div>
         </section>
       ))}
+
+      {/* Data Confidence */}
+      <section className="bg-[var(--card)] border border-[var(--card-border)] rounded-xl p-6 mb-4">
+        <h2 className="text-lg font-bold text-white mb-3">Data Confidence Levels</h2>
+        <div className="space-y-2">
+          {[
+            { level: "High", color: "#10b981", desc: "Verified from authoritative API or 2+ independent sources (World Bank, Oxford Insights, UNCTAD)" },
+            { level: "Medium", color: "#f59e0b", desc: "From credible single source, not independently verified (data center counts, startup estimates for mid-tier countries)" },
+            { level: "Estimated", color: "#ef4444", desc: "Based on qualitative assessment or proxy indicators (AI deployment scores for countries ranked 30-54)" },
+          ].map((item) => (
+            <div key={item.level} className="flex items-start gap-3 text-sm">
+              <div className="w-3 h-3 rounded-full shrink-0 mt-1" style={{ background: item.color }} />
+              <div>
+                <span className="text-white font-medium">{item.level}:</span>{" "}
+                <span className="text-[var(--muted)]">{item.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Verification Protocol */}
+      <section className="bg-[var(--card)] border border-[var(--card-border)] rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-bold text-white mb-3">Verification Protocol</h2>
+        <div className="text-sm text-[var(--muted)] space-y-2">
+          <p>Each data point goes through a 5-step verification process:</p>
+          <ol className="list-decimal list-inside space-y-1 ml-2">
+            <li><strong className="text-white">Primary source check</strong> — Is the data from an authoritative, machine-readable source?</li>
+            <li><strong className="text-white">Secondary verification</strong> — Can the data be independently confirmed from a second source?</li>
+            <li><strong className="text-white">Recency check</strong> — Is this the most current data available? Flag if &gt;2 years old.</li>
+            <li><strong className="text-white">Outlier detection</strong> — Does the value deviate significantly from regional peers?</li>
+            <li><strong className="text-white">Source bias check</strong> — Might the source over/under-represent certain countries?</li>
+          </ol>
+          <p className="mt-3">
+            Data collection uses automated API pulls (World Bank), structured web scraping of government portals and
+            UN websites, authoritative report analysis (Partech, Oxford Insights, AfriLabs), and primary verification
+            against news sources.
+          </p>
+        </div>
+      </section>
 
       {/* Scoring Rules */}
       <section className="bg-[var(--card)] border border-[var(--card-border)] rounded-xl p-6 mb-8">
